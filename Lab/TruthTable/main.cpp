@@ -32,7 +32,14 @@ int main(int argc, char** argv) {
     cout<<(!x?'T':'F')<<"  ";
     cout<<(!y?'T':'F')<<"   ";
     cout<<(x&&y?'T':'F')<<"    ";
-    cout<<(x||y?'T':'F')<<"  ";
+    cout<<(x||y?'T':'F')<<"   ";
+    cout<<(x^y?'T':'F')<<"    ";
+    cout<<(x^y^y?'T':'F')<<"     ";
+    cout<<(x^y^x?'T':'F')<<"      ";
+    cout<<(!x&&!y?'T':'F')<<"       ";
+    cout<<(!(x||y)?'T':'F')<<"      ";
+    cout<<(!x||!y?'T':'F')<<"       ";
+    cout<<(!(x&&y)?'T':'F');
     cout<<endl;
     
     //2nd Output Row
@@ -42,7 +49,49 @@ int main(int argc, char** argv) {
     cout<<(!x?'T':'F')<<"  ";
     cout<<(!y?'T':'F')<<"   ";
     cout<<(x&&y?'T':'F')<<"    ";
-    cout<<(x||y?'T':'F')<<"  ";
+    cout<<(x||y?'T':'F')<<"   ";
+    cout<<(x^y?'T':'F')<<"    ";
+    cout<<(x^y^y?'T':'F')<<"     ";
+    cout<<(x^y^x?'T':'F')<<"      ";
+    cout<<(!x&&!y?'T':'F')<<"       ";
+    cout<<(!(x||y)?'T':'F')<<"      ";
+    cout<<(!x||!y?'T':'F')<<"       ";
+    cout<<(!(x&&y)?'T':'F');
+    cout<<endl;
+    
+    //3rd Output Row
+    y=true;
+    x=false;
+    cout<<(x?'T':'F')<<" ";
+    cout<<(y?'T':'F')<<"  ";
+    cout<<(!x?'T':'F')<<"  ";
+    cout<<(!y?'T':'F')<<"   ";
+    cout<<(x&&y?'T':'F')<<"    ";
+    cout<<(x||y?'T':'F')<<"   ";
+    cout<<(x^y?'T':'F')<<"    ";
+    cout<<(x^y^y?'T':'F')<<"     ";
+    cout<<(x^y^x?'T':'F')<<"      ";
+    cout<<(!x&&!y?'T':'F')<<"       ";
+    cout<<(!(x||y)?'T':'F')<<"      ";
+    cout<<(!x||!y?'T':'F')<<"       ";
+    cout<<(!(x&&y)?'T':'F');
+    cout<<endl;
+    
+        //3rd Output Row
+    x=y=false;
+    cout<<(x?'T':'F')<<" ";
+    cout<<(y?'T':'F')<<"  ";
+    cout<<(!x?'T':'F')<<"  ";
+    cout<<(!y?'T':'F')<<"   ";
+    cout<<(x&&y?'T':'F')<<"    ";
+    cout<<(x||y?'T':'F')<<"   ";
+    cout<<(x^y?'T':'F')<<"    ";
+    cout<<(x^y^y?'T':'F')<<"     ";
+    cout<<(x^y^x?'T':'F')<<"      ";
+    cout<<(!x&&!y?'T':'F')<<"       ";
+    cout<<(!(x||y)?'T':'F')<<"      ";
+    cout<<(!x||!y?'T':'F')<<"       ";
+    cout<<(!(x&&y)?'T':'F');
     cout<<endl;
 
     //Exit stage right!

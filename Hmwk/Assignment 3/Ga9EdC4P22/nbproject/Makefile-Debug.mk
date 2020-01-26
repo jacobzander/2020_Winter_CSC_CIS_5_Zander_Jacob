@@ -14,14 +14,14 @@ GREP=grep
 NM=nm
 CCADMIN=CCadmin
 RANLIB=ranlib
-CC=gcc
-CCC=g++
-CXX=g++
-FC=gfortran
-AS=as
+CC=
+CCC=
+CXX=
+FC=
+AS=
 
 # Macros
-CND_PLATFORM=Cygwin_1-Windows
+CND_PLATFORM=None-Windows
 CND_DLIB_EXT=dll
 CND_CONF=Debug
 CND_DISTDIR=dist
@@ -60,12 +60,11 @@ LDLIBSOPTIONS=
 
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/ga9edc4p22.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/ga9edc4p22 ${OBJECTFILES} ${LDLIBSOPTIONS}
+	${LINK.cc} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/ga9edc4p22 ${OBJECTFILES} ${LDLIBSOPTIONS}
 
 ${OBJECTDIR}/main.o: main.cpp
 	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
+	$(COMPILE.cc) ${OBJECTDIR}/main.o main.cpp
 
 # Subprojects
 .build-subprojects:
