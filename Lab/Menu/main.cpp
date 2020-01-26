@@ -23,7 +23,7 @@ int main(int argc, char** argv) {
     unsigned char choose;//User's choice
     
     //Initialize values
-    nProbs='3';
+    nProbs = '10';
     
     //Loop on menu and problems
     do{
