@@ -46,29 +46,26 @@ int main(int argc, char** argv) {
         newUser = cinLogin("Enter your name:");
         // Check if the name is on the list
             // If name is then cancel
-
-        
-            // If name is not then continue and login the player
-        
-        // Input name into file TODO
-        
-        
-        
-        user = newUser;
+        if(isUserInDB(newUser)) {
+            cout << "The user is in the db" << endl; // debug
+            return 0;
+        } else {
+            addUserDB(newUser);
+            cout << "Added user to db" << endl; // debug
+            user = newUser;
+            cout << "Logged in Under: " << user << endl;
+        }
+    } else {
+        // Check if the name is on the list
+        if (isUserInDB(lgin)) { // Name is on list
+            user = lgin;
+            cout << "Logged in Under: " << user << endl;
+        } else { // Name is not on list
+            cout << "Login invalid name not in db" << endl;
+            return 0;
+        } 
     }
-//    } else {
-//        // Check if the name is on the list
-//        
-//        
-//        if () { // Name is on list
-//            
-//        } else { // Name is not on list
-//            do {
-//                
-//            }
-//        } 
-//        
-//    }
+    
     
     
     
@@ -76,6 +73,9 @@ int main(int argc, char** argv) {
 }
 
 
+/*
+ Login Functions
+ */
 
 string cinLogin() {
     string input;
@@ -110,11 +110,14 @@ bool isLoginValidated(string login) {
     
 }
 
-// Database
+/*
+ Database Functions
+ */
 
 // Checks to see if user is in DB
 bool isUserInDB(string user) {
-    ifstream inf("db.dat");
+    ifstream inf;
+    inf.open("db.dat");
     
     if (!inf) {
         cout << "Could not access the database. Exiting." << endl;
@@ -127,12 +130,20 @@ bool isUserInDB(string user) {
         if (strInput == user) return true;
     }
     return false;
-    
 }
 
 // Adds user to DB
 bool addUserDB(string user) {
+    ofstream ouf;
+    ouf.open("db.dat", ios_base::app);
+    ouf << user << endl;
+}
+
+// Find the user and update there score in the database // Second Project
+bool updateScore(string user) {
     
 }
 
-
+/*
+Game Functions
+ */
