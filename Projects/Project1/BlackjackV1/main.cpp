@@ -23,14 +23,31 @@ int main(int argc, char** argv) {
     string lgin;
     int userMode;
     
+    // User Variables
+    string user;
+    
     // Welcome Screen
     cout << "Welcome to Blackjack (21)" << endl;
+    
     // Login Screen
-    cout << "Please Login (if new user type n)" << endl;
     // Login Validator
     do {
+        cout << "Please Login (if new user type n)" << endl;
         cin >> lgin;
     } while (!isLoginValidated(lgin));
+    
+    if(lgin=="n") {
+        // Create new user
+        string user;
+        bool input;
+        do {
+            cin >> user;
+        } while (!isLoginValidated(user));
+        // Input name into file TODO
+    } else {
+        // Check if the name is on the 
+    }
+    
     return 0;
 }
 // It's just figuring out if the user wants to create a new player
