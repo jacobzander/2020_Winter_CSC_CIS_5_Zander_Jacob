@@ -7,8 +7,6 @@
 
 //System Libraries
 #include <iostream>
-#include <iomanip>
-#include <cmath>
 #include <cstdlib>
 #include <fstream>
 #include <string>
@@ -110,7 +108,7 @@ int main(int argc, char** argv) {
         pC1 = rand() % 10 + 1;
         pC2 = rand() % 10 + 1;
 
-        cout << "First two cards" << pC1 << " amd " << pC2 << endl;
+        cout << "First two cards " << pC1 << " and " << pC2 << endl;
 
         if (isBlackJack(pC1, pC2))
 
@@ -118,7 +116,7 @@ int main(int argc, char** argv) {
             hC1 = rand() % 10 + 1;
         hC2 = rand() % 10 + 1;
 
-        cout << "Dealer first two cards" << hC1 << " and " << hC2 << endl;
+        cout << "Dealer first two cards " << hC1 << " and " << hC2 << endl;
 
         // Player card loop
         bool isPlayerDone = false;
