@@ -31,7 +31,6 @@ int main(int argc, char** argv) {
     srand(static_cast<unsigned int> (time(0)));
 
     // Declare Variables
-
     // Login Variables
     string lgin;
     // Want to use a vector for the cards...
@@ -110,15 +109,15 @@ int main(int argc, char** argv) {
         pC1 = rand() % 10 + 1;
         pC2 = rand() % 10 + 1;
 
-        cout << "First two cards" << pC1 << " amd " << pC2 << endl;
+        cout << "First two cards " << pC1 << " and " << pC2 << endl;
 
         if (isBlackJack(pC1, pC2))
 
 
-            hC1 = rand() % 10 + 1;
+        hC1 = rand() % 10 + 1;
         hC2 = rand() % 10 + 1;
 
-        cout << "Dealer first two cards" << hC1 << " and " << hC2 << endl;
+        cout << "Dealer (House) first two cards " << hC1 << " and " << hC2 << endl;
 
         // Player card loop
         bool isPlayerDone = false;
@@ -146,7 +145,7 @@ int main(int argc, char** argv) {
             cout << "Nobody won better luck next time ... adding soon." << endl;
         }
 
-        cout << "To play again press 1 to exit press any other button to countinue" << endl;
+        cout << "To play again press 1 to exit press any other button to continue" << endl;
         int tmp;
         cin >> tmp;
         if (tmp == 1) {
